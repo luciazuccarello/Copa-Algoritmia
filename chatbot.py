@@ -22,7 +22,7 @@ def encontrar_pregunta_similar(entrada, lista_preguntas):
 def chatbot():
     archivo = "ASISTENTE DE VIAJES.txt"
     preguntas = cargar_preguntas(archivo)
-    print("🧳 Bienvenido al Asistente de Viajes mejorado. Escribí una pregunta o 'salir' para terminar.")
+    print("🧳 Bienvenido al Asistente de Viajes. Escribí una pregunta o 'salir' para terminar.")
     
     while True:
         entrada = input("\n✈️ Tu pregunta: ").strip()
