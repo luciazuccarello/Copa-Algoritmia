@@ -1,13 +1,14 @@
 
-import difflib
+import difflib # Módulo para encontrar coincidencias aproximadas entre cadenas de texto
 
+# Función para cargar las preguntas y respuestas desde un archivo de texto
 def cargar_preguntas(nombre_archivo):
-    preguntas_respuestas = {}
+    preguntas_respuestas = {} # Diccionario donde se guardarán las preguntas y respuestas
     with open(nombre_archivo, 'r', encoding='utf-8') as archivo:
-        lineas = archivo.readlines()
-        pregunta_actual = ""
+        lineas = archivo.readlines()  # Leemos todas las líneas del archivo
+        pregunta_actual = "" # Variable temporal para guardar la pregunta mientras se procesa
         for linea in lineas:
-            linea = linea.strip()
+            linea = linea.strip() # Quitamos espacios en blanco al inicio y final de la línea
             if linea.startswith("Respuesta:"):
                 respuesta = linea.replace("Respuesta:", "").strip()
                 preguntas_respuestas[pregunta_actual] = respuesta
